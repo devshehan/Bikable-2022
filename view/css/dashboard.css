@@ -1,0 +1,374 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --clr-dark : #968c8c77;
+    --clr-lignt : #fff;
+
+    --fs-h1 : 3rem;
+    --fs-h2 : 2.25rem;
+    --fs-h3 : 1.25rem;
+    --fs-body : 1rem;
+    --fs-ele : 0.75rem
+
+    --fw-reg : 300;
+    --fw-bold : 900;
+
+    --ff-family :  'Poppins',sans-serif;
+}
+
+@media (min-width : 800px){
+    :root{
+        --fs-h1 : 4rem;
+        --fs-h2 : 3.75rem;
+        --fs-h3 : 1.5rem;
+        --fs-body : 1.2rem;
+        --fs-ele : 0.8rem
+    }
+}
+
+body{
+    margin: 0;
+    background: var(--clr-lignt);
+    font-family: var(--ff-family);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+}
+
+/*control images*/
+.btn,
+img{
+    display: block;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+}
+
+h1 { font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+
+/* ************************************************************************************************************************ */
+
+/* admin and mechanic section grid */
+.adminMechanic{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr,1fr));
+    grid-template-areas: 
+        "adminArea mechanicArea"
+    ;
+    /* background-color: lightblue; */
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.administrator__detail{
+    grid-area: adminArea;
+
+    background-color: var(--clr-dark);
+    margin-left: 5%;
+    margin-right: 2.5%;
+    padding: 2rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    border-radius: 10px;
+
+}
+
+/* this box work as the grid again */
+.administrator__detail--header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "lefter righter"
+    ;
+}
+
+
+/* administrator title and icon grid */
+.administrator__detail__header--title{
+    grid-area: lefter;
+}
+.administrator__detail__header--addIcon{
+    grid-area: righter;
+}
+
+
+.mechanic__detail{
+    grid-area: mechanicArea;
+
+    background-color: var(--clr-dark);
+    margin-left: 2.5%;
+    margin-right: 5%;
+    padding: 2rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    border-radius: 10px;
+
+}
+
+/* admin and mechanic header fixing */
+.mechanic__detail__title,
+.administrator__detail--header{
+    font-size: var(--fs-h3);
+}
+
+
+/* profile name and location element box fix */
+.mechanic__detail--element,
+.administrator__detail--element{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "imageArea dataArea"
+    ;
+    margin-top: 2%;
+}
+
+.mechanic__detail__body--image,
+.administrator__detail__body--image{
+    grid-area: imageArea;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.mechanic__detail__body--des,
+.administrator__detail__body--des{
+    grid-area: dataArea;
+}
+
+/* responsive admin mechanic area */
+@media (min-width : 800px){
+    .mechanic__location,
+    .employee__location{
+        margin-top: -5px;
+        font-size: var(--fs-ele);
+    }
+}
+
+/* *********************************************************************************************************** */
+
+
+/* user ,bike updates and complains section  */
+.userBikeUpdateComplaints{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-areas: 
+        "userdata bikeupdate complaints"
+    ;
+    /* background: yellow; */
+}
+
+.user__detail{
+    grid-area: userdata;
+
+    background-color: var(--clr-dark);
+    margin-left: 5%;
+    margin-right: 2.5%;
+    padding: 2rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    border-radius: 10px;
+}
+
+.bike__detail{
+    grid-area: bikeupdate;
+
+    background-color: var(--clr-dark);
+    margin-left: 5%;
+    margin-right: 2.5%;
+    padding: 2rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    border-radius: 10px;
+}
+
+.complain__user__detail{
+    grid-area: complaints;
+    
+    background-color: var(--clr-dark);
+    margin-left: 5%;
+    margin-right: 3.5%;
+    padding: 2rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    border-radius: 10px;
+}
+
+/* user, bike update, complaints boxes title setup */
+.complain__user__detail--title,
+.bike__detail--title,
+.user__detail--title{
+    font-size: var(--fs-h3);
+}
+
+/* user box -> body -> element property fix */
+/* complain box -> body -> element property fix */
+
+.complain__user__detail--element,
+.user__detail--element{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "imageside dataside"
+    ;
+
+    margin-top: 2%;
+}
+
+.complain__user__detail__body--image,
+.user__detail__body--image{
+    grid-area: imageside;
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.complain__detail__body--des,
+.user__detail__body--des{
+    grid-area: dataside;
+}
+
+/* resposinve changes */
+@media (min-width : 800px){
+    .complain__user__location,
+    .user__location{
+        margin-top: -5px;
+        font-size: var(--fs-ele);
+    }
+}
+
+/* 
+*********************************************************************************************************************
+*/
+
+/* bike update box property set up */
+
+/* header setup */
+.bike__detail__body--tableHeader{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+        "leftpart midpart rightpart"
+    ;
+    font-size: var(--fs-ele);
+}
+
+.bike__detail__body__tableHeader--issueType{
+    grid-area: leftpart;
+}
+
+.bike__detail__body__tableHeader--assignedMechanic{
+    grid-area: midpart;
+}
+
+.bike__detail__body__tableHeader--bikeqrcode{
+    grid-area: rightpart;
+}
+
+/* table element set up */
+.bike__detail__body--element{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+        "headpart midpart tailpart"
+    ;
+    margin-top: 2%;
+}
+
+.bike__detail__body--image{
+    grid-area: headpart;
+}
+
+.bike__detail__body--assignedMechanic{
+    grid-area: midpart;
+}
+
+.bike__detail__body--bikeQrCode{
+    grid-area: tailpart;
+}
+
+/* responsive look in bikes update table */
+@media (min-width : 800px){
+    .bike__detail__body__assignedMechanic__location{
+        margin-top: -5px;
+        font-size: var(--fs-ele);
+    }
+}
+
+/* 
+*****************************************************************************************************************************
+*/
+
+/* header decoration and setup */
+
+.dashboard--header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7%;
+    margin-top: .5%;
+}
+
+.dashboard__header--title{
+    margin-left: 5%;
+    font-size: 1.5rem;
+}
+
+.dashboard__header--search{
+    width: 30%;
+}
+
+.dashboard__header--searchbox{
+    border-color: black;
+    outline: none;
+    border-radius: 8px;
+    font-size: 70%;
+    /* font-family: inherit; */
+    /* color: white; */
+    /* background-color: #7c7c7c7c; */
+    padding: 0.5em 1em 0.3em 1.5em;
+    width: 80%;
+    margin-bottom: 1%;
+}
+
+.dashboard__header--search,
+.dashboard__header--helpsetting,
+.dashboard__user__detail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    right: 3rem;
+    gap: 1rem;
+    margin-right: 2%;
+}
+
+.imgProperty{
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+
+.dashboard__icon{
+    max-width: 30px;
+    transition: 500ms;
+}
+
+.searchicon{
+    max-width: 20px;
+}
+
+
+.dashboard__icon:hover{
+    transform: scale(1.1);
+}

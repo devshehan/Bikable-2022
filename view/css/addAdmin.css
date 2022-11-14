@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --clr-dark : #303030;
+    --clr-light : #fff;
+
+    --fs-h1 : 3rem;
+    --fs-h2 : 2.25rem;
+    --fs-h3 : 1.25rem;
+    --fs-body : 1rem;
+
+    --fw-reg : 300;
+    --fw-bold : 900;
+
+    --ff-family : 'Poppins',sans-serif;
+}
+
+@media (min-width: 800px) {
+    :root{
+        --fs-h1 : 4rem;
+        --fs-h2 : 3.75rem;
+        --fs-h3 : 2.5rem;
+        --fs-body : 1.2rem;
+    }
+}
+
+body{
+    margin: 0;
+    background: var(--clr-light);
+    font-family: var(--ff-family);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+}
+
+/* set h1,h2,h3 */
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+
+/* control imag behaviour */
+img{
+    display: block;
+    max-width: 100%;
+}
+
+/* build a grid to the section */
+.adminView{
+    margin-right: 10%;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "dataside imageSide"
+    ;
+}
+
+.adminData__view{
+    grid-area: dataside;
+    margin-left: 30%;
+}
+
+.adminLogo__View{
+    grid-area: imageSide;
+    margin-top: 5%;
+}
+
+/* admin view title setup */
+.adminData__View--title{
+    font-size: var(--fs-h3);
+}
+
+/* admin view subtitle setup */
+@media (min-width : 800px){
+    .adminData__View--subtitle{
+        margin-top: -20px;
+    }
+}
+
+.adminData__View__Detail{
+    margin-top: 4%;
+}
+
+.signupDetailbox{
+    border-color: black;
+    outline: none;
+    border-radius: 8px;
+    font-size: 100%;
+    /* font-family: inherit; */
+    /* color: white; */
+    /* background-color: #7c7c7c7c; */
+    padding: 0.3em 1em 0.3em 1.5em;
+    width: 70%;
+    margin-bottom: 2%;
+}
+
+/* button and detailbox space  */
+.addButton{
+    margin-top: 3%;
+}
+
+
+/*button decoration*/
+.btn{
+    border: none;
+    /* margin-left: 0%; */
+    width: 90px;
+    height: 35px;
+    color: white;
+    background: black;
+    border-radius: 13px;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+
+    transition: 500ms;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+/* image decoration */
+.imglogo{
+    transition: 500ms;
+}
+
+.imglogo:hover{
+    transform: scale(1.1);
+}
+
+
+/* 
+******************************************************************************************************************************
+*/
+
+.dashboard--header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7%;
+    margin-top: .5%;
+}
+
+.dashboard__header--title{
+    margin-left: 5%;
+    font-size: 1.5rem;
+}
+
+.dashboard__header--search{
+    width: 30%;
+}
+
+.dashboard__header--searchbox{
+    border-color: black;
+    outline: none;
+    border-radius: 8px;
+    font-size: 70%;
+    /* font-family: inherit; */
+    /* color: white; */
+    /* background-color: #7c7c7c7c; */
+    padding: 0.5em 1em 0.3em 1.5em;
+    width: 80%;
+    margin-bottom: 1%;
+}
+
+.dashboard__header--search,
+.dashboard__header--helpsetting,
+.dashboard__user__detail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    right: 3rem;
+    gap: 1rem;
+    margin-right: 2%;
+}
+
+.imgProperty{
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.dashboard__icon{
+    max-width: 30px;
+    transition: 500ms;
+}
+
+.searchicon{
+    max-width: 20px;
+}
+
+.dashboard__icon:hover{
+    transform: scale(1.1);
+}
