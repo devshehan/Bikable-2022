@@ -14,7 +14,7 @@ function addAdmin(){
         }
     }
 
-    xmlhttp.open('POST', '../../model/addAdminModel.php');
+    xmlhttp.open('POST', '../../model/addAdminModel.php',true);
     xmlhttp.send(formData);
 
 }
