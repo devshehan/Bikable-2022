@@ -21,7 +21,7 @@ function getDataFromLogin(){
         }
     };
 
-    xmlhttp.open("POST", "../../model/loginModel.php");
+    xmlhttp.open("POST", "../../model/loginModel.php",true);
     xmlhttp.send(formData);
 
     // formData.append("email",enteredEmail);

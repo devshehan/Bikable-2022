@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../../controller/dashboard.js"></script>
     <title>Dashboard</title>
 </head>
 <body>
@@ -36,6 +37,7 @@
 
 
     <section class="adminMechanic">
+
         <!-- admin detail -->
         <div class="administrator__detail">
             <div class="administrator__detail--header">
@@ -55,7 +57,7 @@
                         <img src="../images/avatar.png" alt="avatar in dashboard">
                     </div>
                     <div class="administrator__detail__body--des">
-                        <div class="employee__name">Employee 1</div>
+                        <div class="employee__name" id="e1">Employee 1</div>
                         <div class="employee__location">Galle, Srilanka</div>
                     </div>
                 </div>
@@ -65,7 +67,7 @@
                         <img src="../images/avatar.png" alt="avatar in dashboard">
                     </div>
                     <div class="administrator__detail__body--des">
-                        <div class="employee__name">Employee 1</div>
+                        <div class="employee__name" id="e2" >Employee 1</div>
                         <div class="employee__location">Galle, Srilanka</div>
                     </div>
                 </div>
@@ -75,7 +77,7 @@
                         <img src="../images/avatar.png" alt="avatar in dashboard">
                     </div>
                     <div class="administrator__detail__body--des">
-                        <div class="employee__name">Employee 1</div>
+                        <div class="employee__name" id="e3" >Employee 1</div>
                         <div class="employee__location">Galle, Srilanka</div>
                     </div>
                 </div>
@@ -85,7 +87,7 @@
                         <img src="../images/avatar.png" alt="avatar in dashboard">
                     </div>
                     <div class="administrator__detail__body--des">
-                        <div class="employee__name">Employee 1</div>
+                        <div class="employee__name" id="e4">Employee 1</div>
                         <div class="employee__location">Galle, Srilanka</div>
                     </div>
                 </div>
