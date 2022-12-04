@@ -25,12 +25,12 @@ xmlHttp.send();
 
 //take person two administrator's data from the database
 // person 1
-// var person1 = data[0].first_name + " " + data[0].last_name;
-// var person2 = data[1].first_name + " " + data[1].last_name;
+var person1 = data[0].first_name + " " + data[0].last_name;
+var person2 = data[1].first_name + " " + data[1].last_name;
 // var person1 = data[2].first_name + " " + data[0].last_name;
 // var person1 = data[3].first_name + " " + data[0].last_name;
 
 
 //display data on the USER INTERFACE
-// document.getElementById("e1").innerHTML = person1;
-// document.getElementById("e2").innerHTML = person2;
+document.getElementById("e1").innerHTML = person1;
+document.getElementById("e2").innerHTML = person2;
